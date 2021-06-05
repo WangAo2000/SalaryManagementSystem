@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #title {
+            font-family: 宋体, serif;
+            font-size: 50px;
+            text-align: center;
+            margin-top: 12.5%;
+        }
+        form {
+            border: black solid 1px;
+            border-radius: 10px;
+            text-align: center;
+            margin-left: 35%;
+            padding: 1%;
+            width: 25%;
+            height: 140px;
+        }
+    </style>
+</head>
+<body>
+<h1 id="title">登录</h1>
+<form action="/login" method="post">
+    <p style="margin: 0"></p>
+    <p>账号：<input type="text" name="userid" placeholder="请输入账号" value=""></p>
+    <p>密码：<input type="password" name="password" placeholder="请输入密码"></p>
+    <pre>   <input type="submit" value="登录"></pre>
+</form>
+</body>
+</html>

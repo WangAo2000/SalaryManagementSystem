@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<select onChange="location.replace(this.value)">
+    <option value="http://www.baidu.com">百度</option>
+    <option value="/" selected="">新浪</option>
+</select>
+
+<SELECT name="select" οnchange="window.open(this.options[this.selectedIndex].value,target='_self')">
+    <OPTION value='http://www.baidu.com' selected>网址1</OPTION>
+    <OPTION value='http://www.baidu.com'>网址2</OPTION>
+    <OPTION value='file3.htm'>网址3</OPTION>
+</SELECT>
+
+<form action="/">
+    <select name="cars">
+        <option value="volvo"><a href="/">Volvo</a></option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+    </select>
+</form>
+<form action="/addUser" method="post">
+    <table border="1">
+        <tr>
+            <th>教职工号</th>
+            <th>姓名</th>
+            <th>密码</th>
+            <th>部门编号</th>
+            <th>职务</th>
+            <th>身份证号</th>
+            <th>银行卡号</th>
+        </tr>
+        <tr>
+            <td><input type="text" size="5" name="userId"></td>
+            <td><input type="text" size="5" name="name"></td>
+            <td><input type="text" size="5" name="password"></td>
+            <td><input type="text" size="5" name="dId"></td>
+            <td><input type="text" size="5" name="profession"></td>
+            <td><input type="text" size="5" name="idNumber"></td>
+            <td><input type="text" size="5" name="bankId"></td>
+            <td><input type="submit" value="添加"></td>
+        </tr>
+    </table>
+</form>
+
+<pre><a href="/checkSalary">查看工资单</a>       <a href="/changePassword">修改密码</a></pre>
+
+<form action="/changePassword" method="post">
+    <p><input type="text" name="password" placeholder="请输入原密码"></p>
+    <p><input type="text" name="newPassword" placeholder="请输入新密码"></p>
+    <p>msg</p>
+    <pre><input type="submit" value="修改">     <a href="/userDetails">返回</a></pre>
+</form>
+
+
+<p>暂无工资单</p>
+
+<pre><a href="">查看所有教职工</a>
+</pre>
+<a href="">添加员工</a>
+
+<form action="/addSalary" method="post">
+    <table border="1">
+        <tr>
+            <th>教职工号</th>
+            <th>姓名</th>
+            <th>基本工资</th>
+            <th>奖金</th>
+            <th>罚金</th>
+            <th>交税</th>
+            <th>总额</th>
+            <th>日期</th>
+        </tr>
+        <tr>
+            <td><input type="text" size="5" name="userId" readonly value= ></td>
+            <td><input type="text" size="5" name="name" readonly value=""></td>
+            <td><input type="text" size="5" name="basicSalary" readonly value=></td>
+            <td><input type="text" size="5" name="bonus" readonly value=></td>
+            <td><input type="text" size="5" name="fine" readonly value=></td>
+            <td><input type="text" size="5" name="tax" readonly value=></td>
+            <td><input type="text" size="5" name="total" readonly value=></td>
+            <td><input type="text" size="5" name="date" value=></td>
+            <td><input type="submit" value="添加"></td>
+        </tr>
+    </table>
+</form>
+
+<a href="/adminDetails">返回</a>
+
+<p></p>
+</body>
+</html>
