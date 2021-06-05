@@ -62,13 +62,11 @@ public class AddUser extends HttpServlet {
         String idNumber = request.getParameter("idNumber");
         String bankId = request.getParameter("bankId");
 
-        System.out.println(userId);
         AdminDaoImpl adminDao = new AdminDaoImpl();
         if (!userId.equals("")) {
             User user = adminDao.queryUser(userId);
             if (user.getUserId() == null) {
                 adminDao.addUser(userId, name, password, dId, profession, idNumber, bankId);
-                System.out.println("添加成功");
                 response.sendRedirect("/adminDetails");
             } else {
                 response.sendRedirect("/addUser");

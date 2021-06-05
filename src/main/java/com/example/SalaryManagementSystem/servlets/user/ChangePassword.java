@@ -17,7 +17,6 @@ public class ChangePassword extends HttpServlet {
 
         response.setContentType("text/html;charset=GB2312");
         ServletContext context = this.getServletContext();
-        String userId = (String) context.getAttribute("userid");
         String msg = (String) context.getAttribute("msg");
         if (msg == null){
             msg = "";
@@ -55,10 +54,9 @@ public class ChangePassword extends HttpServlet {
         User user = adminDao.queryUser(userId);
         UserDaoImpl userDao = new UserDaoImpl();
 
-        if (password !=null && newPassword != null && newPassword != ""){
+        if (password !=null && newPassword != null && !newPassword.equals("")){
             if (user.getPassword().equals(password)){
                 userDao.updatePassword(userId, newPassword);
-                System.out.println("修改成功");
                 response.sendRedirect("/login");
             }else {
                 context.setAttribute("msg","原密码不对");

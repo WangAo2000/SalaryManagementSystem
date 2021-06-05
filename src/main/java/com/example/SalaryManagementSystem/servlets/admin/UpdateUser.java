@@ -72,8 +72,6 @@ public class UpdateUser extends HttpServlet {
         String idNumber = request.getParameter("idNumber");
         String bankId = request.getParameter("bankId");
         AdminDaoImpl adminDao = new AdminDaoImpl();
-        System.out.println(name);
-
         adminDao.updateUser(userId,name,password,dId,profession,idNumber,bankId);
         response.sendRedirect("/adminDetails");
     }

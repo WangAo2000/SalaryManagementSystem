@@ -40,7 +40,7 @@ public class AddSalary extends HttpServlet {
             fine = 0;
         } else {
             // 羁绊工资
-            if (user.getProfession() == "teacher") {
+            if (user.getProfession().equals("teacher")) {
                 basicSalary = 3000;
             } else if (user.getProfession().equals("professor")) {
                 basicSalary = 5000;

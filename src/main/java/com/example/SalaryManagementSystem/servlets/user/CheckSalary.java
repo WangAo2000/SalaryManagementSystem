@@ -44,9 +44,6 @@ public class CheckSalary extends HttpServlet {
             String month = split[split.length-1];
             if (month.equals(selectedMonth)){
                 selectedSalary = salary;
-
-                System.out.println(selectedSalary);
-
                 out.println("<option value=\"/checkSalary?month="+month+"\" selected>"+month+"月</option>");
             }else {
                 out.println("<option value=\"/checkSalary?month="+month+"\">"+month+"月</option>");
